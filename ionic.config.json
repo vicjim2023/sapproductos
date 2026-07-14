@@ -1,0 +1,7 @@
+{
+  "name": "sapProductos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}
