@@ -1,0 +1,55 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Productos SAP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-searchbar
+    [(ngModel)]="textoBusqueda"
+    (ionInput)="buscar()">
+  </ion-searchbar>
+
+  <ion-button
+    expand="block"
+    (click)="nuevo()">
+    Agregar Producto
+  </ion-button>
+
+  <ion-list>
+
+    <ion-item *ngFor="let p of productosFiltrados">
+
+      <ion-label>
+        <h2>{{p.codigoSap}}</h2>
+        <p>{{p.descripcion}}</p>
+      </ion-label>
+
+      <ion-button
+        fill="clear"
+        (click)="editar(p.id)">
+        Editar
+      </ion-button>
+
+      <ion-button
+        color="danger"
+        fill="clear"
+        (click)="eliminar(p.id)">
+        Eliminar
+      </ion-button>
+
+    </ion-item>
+
+  </ion-list>
+
+  <ion-button
+    color="medium"
+    expand="block"
+    (click)="salir()">
+
+    Cerrar Sesión
+
+  </ion-button>
+
+</ion-content>

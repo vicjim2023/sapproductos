@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Producto SAP</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-item>
+    <ion-input
+      label="Código SAP"
+      [(ngModel)]="producto.codigoSap">
+    </ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-input
+      label="Descripción"
+      [(ngModel)]="producto.descripcion">
+    </ion-input>
+  </ion-item>
+
+  <ion-button
+    expand="block"
+    (click)="guardar()">
+
+    Guardar
+
+  </ion-button>
+
+</ion-content>
